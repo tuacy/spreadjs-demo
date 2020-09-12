@@ -32,7 +32,8 @@
               "src/theme.less",
               "src/styles.css",
               "src/styles/theme.less",
-              "src/styles/index.less"
+              "src/styles/index.less",
+              "node_modules/@grapecity/spread-sheets/styles/gc.spread.sheets.excel2013white.css"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",

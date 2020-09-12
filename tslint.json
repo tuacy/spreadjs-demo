@@ -65,7 +65,7 @@
       "as-needed"
     ],
     "quotemark": [
-      true,
+      false,
       "single"
     ],
     "semicolon": {
@@ -147,6 +147,7 @@
       "element",
       "app",
       "kebab-case"
-    ]
+    ],
+    "prefer-const": false
   }
 }

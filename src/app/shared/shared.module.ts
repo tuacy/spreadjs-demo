@@ -9,12 +9,16 @@ import {SHARED_ZORRO_MODULES} from './shared-zorro.module';
 import {CountdownModule} from 'ngx-countdown';
 import {NgxTinymceModule} from 'ngx-tinymce';
 import {UEditorModule} from 'ngx-ueditor';
-import { NgxEchartsModule } from 'ngx-echarts';
+import {NgxEchartsModule} from 'ngx-echarts';
+import {SpreadSheetsModule} from '@grapecity/spread-sheets-angular';
 
 const THIRDMODULES = [
   CountdownModule,
   UEditorModule,
   NgxTinymceModule,
+  /**
+   * echart
+   */
   NgxEchartsModule.forRoot({
     /**
      * This will import all modules from echarts.
@@ -23,6 +27,7 @@ const THIRDMODULES = [
      */
     echarts: () => import('echarts'), // or import('./path-to-my-custom-echarts')
   }),
+  SpreadSheetsModule,
 ];
 // #endregion
 
