@@ -13,6 +13,7 @@ import en from '@angular/common/locales/en';
 
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+import {RoutesModule} from './routes/routes.module';
 
 registerLocaleData(en);
 
@@ -26,8 +27,9 @@ registerLocaleData(en);
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
+    CoreModule,
     SharedModule,
-    CoreModule
+    RoutesModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

@@ -1,0 +1,34 @@
+<div class="full-width full-height padding-8 position-relative overflow-hidden">
+
+  <!-- 左侧spread表单区域 -->
+  <gc-spread-sheets [hostStyle]="hostStyle" (workbookInitialized)="initSpread($event)">
+    <gc-worksheet [dataSource]="dataSource" [autoGenerateColumns]='autoGenerateColumns'>
+      <gc-column dataField="Film" width=160></gc-column>
+      <gc-column dataField="Genre" width=70></gc-column>
+      <gc-column dataField="Lead Studio" width=90></gc-column>
+      <gc-column dataField="Audience Score %" width=110></gc-column>
+      <gc-column dataField="Profitablity" width=80></gc-column>
+      <gc-column dataField="Rating"></gc-column>
+      <gc-column dataField="Worldwide Gross" width=110></gc-column>
+      <gc-column dataField="Year"></gc-column>
+    </gc-worksheet>
+  </gc-spread-sheets>
+
+  <!-- 右侧表单控制区域 -->
+  <div class="options-container">
+    <div class="option-row">
+      <input type="button" value="Add Sheet" id="btnAddSheet" (click)="addSheet()"/>
+      <input type="button" value="Remove Sheet" id="btnRemoveSheet" (click)="removeSheet()"/>
+      <input type="button" value="Clear Sheets" id="btnClearSheets" (click)="clearSheets()"/>
+    </div>
+    <div class="option-row">
+      <label>ActiveSheetIndex:</label>
+      <input type="text" id="activeSheetIndex" [value]="activeSheetIndex" (change)="changeActiveSheetIndex($event)"/>
+      <input type="button" id="btnSetActiveSheetIndex" value="Set" (click)="setActiveSheetIndex()"/>
+    </div>
+    <div class="option-row">
+      <label>This switches the currently active sheet to the sheet at the specified index.</label>
+    </div>
+  </div>
+
+</div>

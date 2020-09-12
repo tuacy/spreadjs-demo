@@ -1,12 +1,27 @@
-<!-- NG-ZORRO -->
-<!--<a href="https://github.com/NG-ZORRO/ng-zorro-antd" target="_blank" style="display: flex;align-items: center;justify-content: center;height: 100%;width: 100%;">-->
-<!--  <img height="300" src="https://img.alicdn.com/tfs/TB1X.qJJgHqK1RjSZFgXXa7JXXa-89-131.svg">-->
-<!--</a>-->
-<gc-spread-sheets [backColor]="spreadBackColor" [hostStyle]="hostStyle" (workbookInitialized)="workbookInit($event)">
-  <gc-worksheet [name]="sheetName" [dataSource]="data">
-    <gc-column dataField="Name" width=300></gc-column>
-    <gc-column dataField="Category" [width]=columnWidth></gc-column>
-    <gc-column dataField="Price" [width]=columnWidth formatter="$ #.00"></gc-column>
-    <gc-column dataField="Shopping Place" [width]=columnWidth></gc-column>
-  </gc-worksheet>
-</gc-spread-sheets>
+<div class="full-width full-height d-flex">
+  <!-- 左侧导航栏 -->
+  <div style="width: 240px;" class="full-height overflow-y">
+    <ul nz-menu nzMode="inline" class="full-width">
+      <li nz-submenu  nzTitle="功能例子" nzIcon="appstore">
+        <ul>
+          <li nz-submenu nzTitle="工作簿">
+            <ul>
+              <li nz-menu-item>
+                <a routerLink="/functional/workbook/initialization-spread" routerLinkActive="active">初始化Spread</a>
+              </li>
+              <li nz-menu-item>
+                <a routerLink="/functional/workbook/spread-form" routerLinkActive="active">Spread表单</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 右侧内容区域 -->
+  <div class="full-height flex-1">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+

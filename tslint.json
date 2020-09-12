@@ -62,11 +62,12 @@
     "no-var-requires": false,
     "object-literal-key-quotes": [
       true,
-      "as-needed"
+      "consistent-as-needed"
     ],
     "quotemark": [
-      false,
-      "single"
+      true,
+      "single",
+      "jsx-double"
     ],
     "semicolon": {
       "options": [
@@ -148,6 +149,7 @@
       "app",
       "kebab-case"
     ],
-    "prefer-const": false
+    "prefer-const": false,
+    "only-arrow-functions": false
   }
 }
