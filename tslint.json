@@ -150,6 +150,7 @@
       "kebab-case"
     ],
     "prefer-const": false,
-    "only-arrow-functions": false
+    "only-arrow-functions": false,
+    "one-variable-per-declaration": false
   }
 }

@@ -1,0 +1,32 @@
+.options-container {
+  float: right;
+  width: 280px;
+  padding: 12px;
+  height: 100%;
+  box-sizing: border-box;
+  background: #fbfbfb;
+  overflow: auto;
+}
+
+.options-row {
+  font-size: 14px;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+input {
+  padding: 4px 6px;
+}
+
+input[type=button] {
+  width: 110px;
+  display: inline-block;
+}
+
+input[type="text"] {
+  width: 200px;
+}
+
+label {
+  margin-bottom: 6px;
+}

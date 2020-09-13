@@ -1,0 +1,37 @@
+.options-container {
+  float: right;
+  width: 280px;
+  padding: 12px;
+  height: 100%;
+  box-sizing: border-box;
+  background: #fbfbfb;
+  overflow: auto;
+}
+
+.option-row {
+  font-size: 14px;
+  padding: 2px;
+  margin-top: 2px;
+}
+
+.sample-options {
+  z-index: 1000;
+}
+
+label {
+  margin-bottom: 6px;
+}
+
+p{
+  padding:2px 10px;
+  background-color:lavender;
+}
+
+input {
+  padding: 2px 6px;
+}
+
+input[type=button] {
+  margin-top: 6px;
+  display: block;
+}

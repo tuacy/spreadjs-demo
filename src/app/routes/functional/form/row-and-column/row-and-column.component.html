@@ -1,0 +1,51 @@
+<div class="full-width full-height padding-8 position-relative overflow-hidden">
+  <gc-spread-sheets [hostStyle]="hostStyle" (workbookInitialized)="initSpread($event)">
+    <gc-worksheet></gc-worksheet>
+  </gc-spread-sheets>
+  <div class="options-container">
+    <div class="options-row">
+      <input type="button" value="Add Row" id="btnAddRow" (click)="addRow()" />
+      <input type="button" value="Delete Row" id="btnDeleteRow" (click)="deleteRow()" />
+    </div>
+    <div class="options-row">
+      <input type="button" value="Add Column" id="btnAddColumn" (click)="addColumn()" />
+      <input type="button" value="Delete Column" id="btnDeleteColumn" (click)="deleteColumn()" />
+    </div>
+    <div class="options-row">
+      <label for="rowIndex" style="display: inline-block;width: 100px">Row Index:</label>
+      <input type="text" id="rowIndex" [value]="rowIndex" (change)="setRowIndex($event)"/>
+      <br>
+      <label for="rowIndex" style="padding-top: 6px">The index is zero based.</label>
+      <div class="options-row">
+        <input type="checkbox" id="chkRowVisible" checked (change)="checkRowVisble($event)" />
+        <label for="chkRowVisible">Row Visible</label>
+      </div>
+      <div class="options-row">
+        <input type="checkbox" id="chkRowAutoFit" (change)="checkRowAutoFit($event)" />
+        <label for="chkRowAutoFit">Row AutoFit</label>
+      </div>
+    </div>
+    <div class="options-row">
+      <label for="columnIndex" style="display: inline-block;width: 100px">Column Index:</label>
+      <input type="text" id="columnIndex" [value]="columnIndex" (change)="setColumnIndex($event)" />
+      <br>
+      <label for="columnIndex" style="padding-top: 6px">The index is zero based.</label>
+      <div class="options-row">
+        <input type="checkbox" id="chkColumnVisible" checked (change)="checkColumnVisible($event)"/>
+        <label for="chkColumnVisible">Column Visible</label>
+      </div>
+      <div class="options-row">
+        <input type="checkbox" id="chkColumnAutoFit" (change)="checkColumnAutoFit($event)"/>
+        <label for="chkColumnAutoFit">Column AutoFit</label>
+      </div>
+    </div>
+    <hr />
+    <div class="options-row">
+      <span>ResizeZeroIndicator:</span>
+      <select id="resizeZeroIndicator" (change)="setResizeZeroIndicator($event)">
+        <option value="0">Default</option>
+        <option value="1" selected>Enhanced</option>
+      </select>
+    </div>
+  </div>
+</div>

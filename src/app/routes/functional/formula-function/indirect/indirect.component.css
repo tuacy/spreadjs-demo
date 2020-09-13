@@ -1,0 +1,29 @@
+.options-container {
+  float: right;
+  width: 280px;
+  padding: 12px;
+  height: 100%;
+  box-sizing: border-box;
+  background: #fbfbfb;
+  overflow: auto;
+}
+
+.option-row {
+  margin-bottom: 12px;
+}
+
+input {
+  width: 100%;
+  padding: 4px 6px;
+  margin-bottom: 6px;
+  box-sizing: border-box;
+}
+
+input[type=button] {
+  width: auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+}

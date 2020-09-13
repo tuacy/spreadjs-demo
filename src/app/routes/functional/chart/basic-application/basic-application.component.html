@@ -1,0 +1,60 @@
+<div class="full-width full-height padding-8 position-relative overflow-hidden">
+  <gc-spread-sheets [hostStyle]="hostStyle" (workbookInitialized)="initSpread($event)">
+    <gc-worksheet></gc-worksheet>
+    <gc-worksheet></gc-worksheet>
+  </gc-spread-sheets>
+  <div class="options-container">
+    <p>Highlight a range of cells, select a chart group and chart type then click “Add Chart” to add the chart to
+      the sheet.
+      Switch the axes with “Switch row/column” or remove the chart(s) with “Remove chart” or “Remove all charts”.
+    </p>
+    <div class="option-row">
+      <label>Group:</label>
+      <select id="groupSelect" style="width: 160px" [(ngModel)]="groupType" (change) = "changeTypeSelect()">
+        <option value="0">Column</option>
+        <option value="1">Line</option>
+        <option value="2">Pie</option>
+        <option value="3">Bar</option>
+        <option value="4">Area</option>
+        <option value="5">Scatter</option>
+        <option value="6">Stock</option>
+      </select>
+    </div>
+
+    <div class="option-row">
+      <label>Type:</label>
+      <select id="typeSelect" style="width: 160px" [(ngModel)]="chartType"></select>
+    </div>
+    <div class="option-row">
+
+      <input type="button" style="width: 150px;margin:5px ;margin-bottom: 15px;" value="Add Chart"
+             id="insertChart" (click)="insertChart()" />
+      <input type="button" style="width: 150px;margin:5px" value="Switch row/column" id="switchRowColumn"
+             (click)="switchRowColumn()" />
+      <input type="button" style="width: 150px;margin:5px" value="Remove chart" id="removeChart"
+             (click)="removeChart()" />
+      <input type="button" style="width: 150px;margin:5px" value="Remove all charts" id="removeAllCharts"
+             (click)="removeAllChart()" />
+    </div>
+    <div class="option-row">
+      <label>Display Blanks Cells As:</label>
+      <select id="displayBlanksCells" style="width: 80px" [(ngModel)]="displayBlanksAs"
+              (change)="displayBlanksCells()">
+        <option value="1" selected="selected">Gaps</option>
+        <option value="2">Zero</option>
+        <option value="0">Connect</option>
+      </select>
+    </div>
+
+    <div class="option-row">
+      <input type="checkbox" id="showNAAsBlanks" [(ngModel)]="displayNaNAsBlank" (change)="showNAAsBlanks()" />
+      <label for="showNAAsBlanks">Display #N/A Cells As Blank Cells</label>
+    </div>
+
+    <div class="option-row">
+      <input type="checkbox" id="ignoreHidden" [(ngModel)]="ignoreHidden" (change)="ignoreHiddenRowAndColumn()" />
+      <label for="ignoreHidden">Ingore Hidden Rows And Columns</label>
+    </div>
+  </div>
+</div>
+ 

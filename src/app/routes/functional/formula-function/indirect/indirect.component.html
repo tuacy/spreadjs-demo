@@ -1,0 +1,27 @@
+<div class="full-width full-height padding-8 position-relative overflow-hidden">
+  <gc-spread-sheets [hostStyle]="hostStyle" (workbookInitialized)="initSpread($event)">
+    <gc-worksheet>
+    </gc-worksheet>
+    <gc-worksheet>
+    </gc-worksheet>
+  </gc-spread-sheets>
+  <div class="options-container">
+    <div class="option-row">
+      <label class="colorLabel">Enter a custom name below and set what it references. Then click the "Add custom name"
+        button to add it to Spread for use in the cells.</label>
+    </div>
+    <div class="option-row">
+      <label class="sizedLabel">Custom name:</label>
+      <input type="text" value="name1" id="customName"/>
+    </div>
+    <div class="option-row">
+      <label class="sizedLabel">Reference to:</label>
+      <input type="text" value="$A$1" id="customReference"/>
+    </div>
+    <div class="option-row">
+      <input type="button" id="btnAddCustomName" value="Add custom name" title="Add a custom name for sample"
+             (click)="addIndirectCustomName($event)"/>
+    </div>
+  </div>
+</div>
+ 

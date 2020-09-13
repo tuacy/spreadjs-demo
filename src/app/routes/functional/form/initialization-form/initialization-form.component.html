@@ -1,0 +1,19 @@
+<div class="full-width full-height padding-8 position-relative overflow-hidden">
+  <gc-spread-sheets [hostStyle]="hostStyle" (workbookInitialized)="initSpread($event)">
+    <gc-worksheet [dataSource]="dataSource" [autoGenerateColumns]='autoGenerateColumns'>
+      <gc-column dataField="Film" width=160></gc-column>
+      <gc-column dataField="Genre" width=70></gc-column>
+      <gc-column dataField="Lead Studio" width=90></gc-column>
+      <gc-column dataField="Audience Score %" width=110></gc-column>
+      <gc-column dataField="Profitability" width=80></gc-column>
+      <gc-column dataField="Rating"></gc-column>
+      <gc-column dataField="Worldwide Gross" width=110></gc-column>
+      <gc-column dataField="Year"></gc-column>
+    </gc-worksheet>
+  </gc-spread-sheets>
+  <div class="options-container">
+    <input type="button" value="Add Sheet" id="btnAddSheet" (click)="addSheet()"/>
+    <input type="button" value="Remove Sheets" id="btnRemoveSheet" (click)="removeSheet()"/>
+    <input type="button" value="Remove All Sheets" id="btnClearSheets" (click)="clearSheet()"/>
+  </div>
+</div>
